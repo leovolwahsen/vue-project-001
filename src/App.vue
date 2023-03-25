@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped lang="scss">
-//lang='sass' helps ts to understand the type of language so problem ist fixed
+//lang='scss' helps ts to understand the type of language so problem ist fixed
 nav {
   display: flex;
   gap: 0.5rem;
