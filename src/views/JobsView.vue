@@ -11,11 +11,22 @@ let jobs: IJob[] = (await axios.get('https://edwardtanguay.vercel.app/share/jobs
 
 <template>
   <div>
-    <p>This is the jobs page.</p>
-    <p>There are currently {{ jobs.length }}</p>
-
-    <!-- <p>There are {{ jobs.length }} jobs.</p> -->
+    <p>
+      There are currently {{ jobs.length }} jobs currently on the german market in the Industry of
+      Full-Stack Development.
+    </p>
   </div>
+  <div>
+    <!-- <ul>
+      <li>
+        Title: {{ jobs[1].title }} Company: <link rel="stylesheet" href={{ jobs[1].url }} />
+      </li>
+    </ul> -->
+    <ul>
+      <li v-for="job in jobs">{{ job.title }}</li>
+    </ul>
+  </div>
+  <!-- <p>There are {{ jobs.length }} jobs.</p> -->
 </template>
 <!-- <a target="_blank" :href="job.url">{{ job.title }}</a>
 - {{ job.company }} -->
