@@ -18,16 +18,14 @@ nav {
   background-color: #222;
   padding: 0.5rem 1rem;
 }
+h1 {
+  color: orange;
+}
 a {
   color: #ccc;
   text-decoration: none;
   font-size: 1.3rem;
 }
-
-h1 {
-  color: orange;
-}
-
 a.router-link-active {
   color: orange;
 }
