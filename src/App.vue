@@ -3,13 +3,17 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <h1>The Info Site</h1>
-  <nav>
-    <RouterLink to="/">Welcome</RouterLink>
-    <RouterLink to="/jobs">Jobs</RouterLink>
-    <RouterLink to="/skills">Skills</RouterLink>
-  </nav>
-  <RouterView />
+  <Suspense>
+    <div>
+      <h1>The Info Site</h1>
+      <nav>
+        <RouterLink to="/">Welcome</RouterLink>
+        <RouterLink to="/jobs">Jobs</RouterLink>
+        <RouterLink to="/skills">Skills</RouterLink>
+      </nav>
+      <RouterView />
+    </div>
+  </Suspense>
 </template>
 
 <style scoped lang="scss">
