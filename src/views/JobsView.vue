@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import type { IJob } from '@/interfaces'
 import axios from 'axios'
+import type { IJob } from '../interfaces'
+
+let jobs: IJob[] = (await axios.get('https://edwardtanguay.vercel.app/share/jobs.json')).data
+// import type { IJob } from '@/interfaces'
+// import axios from 'axios'
 
 //const jobs: IJob[] = (await axios.get('https://edwardtanguay.vercel.app/share/jobs.json')).data
 </script>
@@ -8,6 +12,7 @@ import axios from 'axios'
 <template>
   <div>
     <p>This is the jobs page.</p>
+    <p>There are currently {{ jobs.length }}</p>
 
     <!-- <p>There are {{ jobs.length }} jobs.</p> -->
   </div>
