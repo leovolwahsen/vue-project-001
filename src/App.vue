@@ -25,9 +25,9 @@ nav {
   }
 }
 h1 {
-  color: rgb(206, 163, 83);
+  color: orange;
 }
 a.router-link-active {
-  color: rgb(207, 207, 110);
+  color: orange;
 }
 </style>
