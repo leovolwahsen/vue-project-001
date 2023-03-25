@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ISkill } from '@/interfaces'
 import axios from 'axios'
 const skills: ISkill[] = (await axios.get('https://edwardtanguay.vercel.app/share/skills.json'))
   .data
