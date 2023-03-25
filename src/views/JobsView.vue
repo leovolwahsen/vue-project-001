@@ -3,10 +3,7 @@ import axios from 'axios'
 import type { IJob } from '../interfaces'
 
 let jobs: IJob[] = (await axios.get('https://edwardtanguay.vercel.app/share/jobs.json')).data
-// import type { IJob } from '@/interfaces'
-// import axios from 'axios'
-
-//const jobs: IJob[] = (await axios.get('https://edwardtanguay.vercel.app/share/jobs.json')).data
+console.log(jobs)
 </script>
 
 <template>
@@ -17,19 +14,13 @@ let jobs: IJob[] = (await axios.get('https://edwardtanguay.vercel.app/share/jobs
     </p>
   </div>
   <div>
-    <!-- <ul>
-      <li>
-        Title: {{ jobs[1].title }} Company: <link rel="stylesheet" href={{ jobs[1].url }} />
-      </li>
-    </ul> -->
     <ul>
-      <li v-for="job in jobs">{{ job.title }}</li>
+      <li v-for="job in jobs">
+        <a target="_blank" :href="job.url">{{ job.title }}</a> - {{ job.company }}{{ job.title }}
+      </li>
     </ul>
   </div>
-  <!-- <p>There are {{ jobs.length }} jobs.</p> -->
 </template>
-<!-- <a target="_blank" :href="job.url">{{ job.title }}</a>
-- {{ job.company }} -->
 
 <style scoped>
 li {
