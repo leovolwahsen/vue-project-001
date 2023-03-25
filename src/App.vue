@@ -11,21 +11,24 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView />
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+//lang='sass' helps ts to understand the type of language so problem ist fixed
 nav {
   display: flex;
   gap: 0.5rem;
   background-color: #222;
   padding: 0.5rem 1rem;
+
+  a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
 }
 h1 {
   color: orange;
 }
-a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 1.3rem;
-}
+
 a.router-link-active {
   color: orange;
 }
